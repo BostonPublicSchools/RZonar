@@ -1,0 +1,99 @@
+---
+title: "RZonar Quickstart"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{quickstart}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+RZonar is an R package for retrieving data from the 
+[Zonar API](https://support.zonarsystems.net/hc/en-us/categories/360000020371-API-Portal)
+
+
+```{r, include = FALSE}
+library(RZonar)
+
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+
+```
+
+## Capabilities and limitations
+
+*RZonar* is not a comprehensive Zonar client, nor does it aspire to be. It currently focuses
+on just a few API endpoints, including
+[schedule](https://support.zonarsystems.net/hc/en-us/articles/360018372852-GPS-Schedule-Report),
+[path](https://support.zonarsystems.net/hc/en-us/articles/360016205232-Export-a-Path),
+[zones](https://support.zonarsystems.net/hc/en-us/articles/360018260131-List-Location-of-Interest-GPS-Zone),
+[idle events](https://support.zonarsystems.net/hc/en-us/articles/360016418051-GPS-Idle-Stop-Report),
+and
+[assets](https://support.zonarsystems.net/hc/en-us/articles/360016149712-Get-Assets).
+
+The *RZonar* package does not provide anything close to a 1:1 mapping to the Zonar API; if that's what
+you want just use the Zonar API directly, e.g., via the [httr2](https://httr2.r-lib.org/)
+package in R. Rather, RZonar offers high-level data retrieval and formatting using
+the Zonar API. It aspires to be more like an R-based version of the Zonar website,
+providing relatively easy access to Zonar data.
+
+## Function naming convention
+
+Most functions in *RZonar* are prefixed with `zonar_get`. This makes for somewhat 
+verbose function names, but makes auto-completion easy in most modern editors and 
+IDEs. Assuming you use [Rstudio](https://posit.co/download/rstudio-desktop/) or
+similarly capable development environment you can generall just type `zonar_` and
+browse the completion suggesions to find the function you are looking for.
+
+## Time-varying and time-invariant data
+
+Many functions provided by *RZonar* require `start` and `end` arguments. This is
+your clue that the function returns time-varying data. All such arguments may be
+specified as character strings formatted as `YYY-MM-DD HH:MM:SS`. For example we
+can retrieve path data from 8-9 AM on December 14th 2022 like this:
+
+```{r path_example, eval=FALSE}
+library(RZonar)
+
+paths_12.12.22 <- zonar_get_paths(
+  start = "2022-12-14 08:00:00", end = "2022-12-14 09:00:00"
+  )
+```
+
+Other functions that require `start` and `end` arguments (and therefore return
+time-varying data) include `zonar_get_idle_events` and `zonar_get_schedules`.
+
+Functions without `start` or `end` arguments often return time-inverient data. 
+For example, we can retrieve a list of Assets (buses) like this:
+
+```{r assets}
+assets <- zonar_get_assets()
+```
+
+Not that time-invariant data *can and does change*, e.g., when a new asset is added
+to the system. However the Zonar API does not allow you to retrieve time-stamped
+versions, i.e. we cannot easily get the asset list as it appeared on some arbitrary
+historical date.
+
+*RZonar* does not currently provide much in the way of analysis or visualization,
+so it is often convenient to use other popular R packages for that purpose.
+
+```{r setup, messages=FALSE}
+library(dplyr)
+library(ggplot2)
+library(sf)
+```
+
+These packages make examining, manipulating, and plotting the data returned by
+*RZonar* easier:
+
+```{r glimpse}
+glimpse(assets)
+```
+
+## Using geographical information
+
+*RZonar* typically returns geometry as Lat/Lon points or 
+[well-known text](https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry)
+for simplicity and to avoid additional R package dependencies.

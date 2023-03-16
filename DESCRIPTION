@@ -1,0 +1,41 @@
+Package: RZonar
+Type: Package
+Title: Conveniently access the Zonar API from R
+Version: 0.5.0
+Author: Ista Zahn
+Maintainer: Ista Zahn <izahn@bostonpublicschools.orgt>
+Description: The Zonar API documented at 
+    https://support.zonarsystems.net/hc/en-us enables the programatic retrieval
+    of Zonar data. This R package wraps that API, making it more convenient to
+    retrieve both specific and bulk data from the Zonar API.
+License: What license is it under?
+URL: https://github.com/BostonPublicSchools/RZonar, https://bostonpublicschools.github.io/RZonar/
+BugReports: https://github.com/BostonPublicSchools/RZonar/issues
+Encoding: UTF-8
+LazyData: true
+Imports:
+    dplyr,
+    dbplyr,
+    purrr,
+    readr,
+    httr2,
+    lubridate,
+    tidyr,
+    rlang,
+    xml2,
+    memoise,
+    stringr,
+    RVersatransRP,
+    magrittr
+Suggests:
+    knitr,
+    readxl,
+    writexl,
+    sf,
+    DBI,
+    odbc,
+    rmarkdown,
+    testthat
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+VignetteBuilder: knitr

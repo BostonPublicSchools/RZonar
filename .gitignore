@@ -1,0 +1,12 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+renv/*
+*.Rproj
+.Renviron
+.Rprofile
+*.docx
+desktop.ini
+.zonarCache/*
+inst/doc
