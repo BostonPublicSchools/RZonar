@@ -1,7 +1,7 @@
 Package: RZonar
 Type: Package
 Title: Conveniently access the Zonar API from R
-Version: 0.5.0
+Version: 0.6.0.9000
 Author: Ista Zahn
 Maintainer: Ista Zahn <izahn@bostonpublicschools.orgt>
 Description: The Zonar API documented at 

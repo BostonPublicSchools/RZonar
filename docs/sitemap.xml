@@ -1,72 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>/404.html</loc>
+    <loc>https://bostonpublicschools.github.io/RZonar/404.html</loc>
   </url>
   <url>
-    <loc>/articles/index.html</loc>
+    <loc>https://bostonpublicschools.github.io/RZonar/articles/index.html</loc>
   </url>
   <url>
-    <loc>/articles/quickstart.html</loc>
+    <loc>https://bostonpublicschools.github.io/RZonar/articles/quickstart.html</loc>
   </url>
   <url>
-    <loc>/authors.html</loc>
+    <loc>https://bostonpublicschools.github.io/RZonar/authors.html</loc>
   </url>
   <url>
-    <loc>/index.html</loc>
+    <loc>https://bostonpublicschools.github.io/RZonar/index.html</loc>
   </url>
   <url>
-    <loc>/reference/get_zonar_schedules_all.html</loc>
+    <loc>https://bostonpublicschools.github.io/RZonar/reference/get_zonar_schedules_all.html</loc>
   </url>
   <url>
-    <loc>/reference/hello.html</loc>
+    <loc>https://bostonpublicschools.github.io/RZonar/reference/hello.html</loc>
   </url>
   <url>
-    <loc>/reference/index.html</loc>
+    <loc>https://bostonpublicschools.github.io/RZonar/reference/index.html</loc>
   </url>
   <url>
-    <loc>/reference/RZonar-package.html</loc>
+    <loc>https://bostonpublicschools.github.io/RZonar/reference/RZonar-package.html</loc>
   </url>
   <url>
-    <loc>/reference/zonar_cleanup.html</loc>
+    <loc>https://bostonpublicschools.github.io/RZonar/reference/zonar_cleanup.html</loc>
   </url>
   <url>
-    <loc>/reference/zonar_credentials.html</loc>
+    <loc>https://bostonpublicschools.github.io/RZonar/reference/zonar_credentials.html</loc>
   </url>
   <url>
-    <loc>/reference/zonar_get_assets.html</loc>
+    <loc>https://bostonpublicschools.github.io/RZonar/reference/zonar_get_assets.html</loc>
   </url>
   <url>
-    <loc>/reference/zonar_get_idle_events.html</loc>
+    <loc>https://bostonpublicschools.github.io/RZonar/reference/zonar_get_idle_events.html</loc>
   </url>
   <url>
-    <loc>/reference/zonar_get_paths.html</loc>
+    <loc>https://bostonpublicschools.github.io/RZonar/reference/zonar_get_paths.html</loc>
   </url>
   <url>
-    <loc>/reference/zonar_get_schedules.html</loc>
+    <loc>https://bostonpublicschools.github.io/RZonar/reference/zonar_get_schedules.html</loc>
   </url>
   <url>
-    <loc>/reference/zonar_get_schedules_all.html</loc>
+    <loc>https://bostonpublicschools.github.io/RZonar/reference/zonar_get_schedules_all.html</loc>
   </url>
   <url>
-    <loc>/reference/zonar_get_schedules_for_asset.html</loc>
+    <loc>https://bostonpublicschools.github.io/RZonar/reference/zonar_get_schedules_for_asset.html</loc>
   </url>
   <url>
-    <loc>/reference/zonar_get_schedules_for_time.html</loc>
+    <loc>https://bostonpublicschools.github.io/RZonar/reference/zonar_get_schedules_for_time.html</loc>
   </url>
   <url>
-    <loc>/reference/zonar_get_schedules_for_zone.html</loc>
+    <loc>https://bostonpublicschools.github.io/RZonar/reference/zonar_get_schedules_for_zone.html</loc>
   </url>
   <url>
-    <loc>/reference/zonar_get_zones.html</loc>
+    <loc>https://bostonpublicschools.github.io/RZonar/reference/zonar_get_zones.html</loc>
   </url>
   <url>
-    <loc>/reference/zonar_get_zone_categories.html</loc>
+    <loc>https://bostonpublicschools.github.io/RZonar/reference/zonar_get_zone_categories.html</loc>
   </url>
   <url>
-    <loc>/reference/zonar_rename_zones.html</loc>
+    <loc>https://bostonpublicschools.github.io/RZonar/reference/zonar_rename_zones.html</loc>
   </url>
   <url>
-    <loc>/reference/zonar_req.html</loc>
+    <loc>https://bostonpublicschools.github.io/RZonar/reference/zonar_req.html</loc>
   </url>
 </urlset>

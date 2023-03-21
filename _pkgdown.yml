@@ -1,4 +1,7 @@
-pkurl: ~
 template:
   bootstrap: 5
+development:
+  mode: unreleased
+url: https://bostonpublicschools.github.io/RZonar/
+
 
