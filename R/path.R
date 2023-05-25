@@ -66,7 +66,7 @@ zonar_get_paths <- function(start,
   if(nrow(out) < 1) stop("No Zonar path data for assets ", stringr::str_c(assets, collapse = ";"), "at ", stringr::str_c(as.character(start), str_c(as.character(end))))
   out <- dplyr::mutate(
     out,
-    datetime = lubridate::ymd_hms(paste(.data$Date, .data$`Time(EST)`), tz = timezone))
+    datetime = lubridate::ymd_hms(paste(.data$Date, .data$`Time(EDT)`), tz = timezone))
   out <- dplyr::filter(
     out,
      .data$datetime >= start & .data$datetime <= end)

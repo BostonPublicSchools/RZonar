@@ -137,7 +137,6 @@ zonar_get_schedules <- function(start,
     end <- as.integer(lubridate::ymd_hms(end, tz = timezone))
 
     ## Retrieve schedule info
-    dataLOI <- dplyr::filter(dataLOI, zoneID != 1043)
     dataSched <- purrr::map_dfr(dataLOI$zoneID, memoise::memoise(zonar_get_schedules_for_zone, cache = .zonarCache),
                                 start = start, end = end, timezone = timezone)
   } else if(by == "asset") {
