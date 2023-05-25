@@ -64,9 +64,10 @@ zonar_get_paths <- function(start,
     memoise::memoise(get_paths, cache = .zonarCache),
     timezone = timezone)
   if(nrow(out) < 1) stop("No Zonar path data for assets ", stringr::str_c(assets, collapse = ";"), "at ", stringr::str_c(as.character(start), str_c(as.character(end))))
+  DSTstring  <- ifelse(lubridate::dst(start), "Time(EDT)", "Time(EST)")
   out <- dplyr::mutate(
     out,
-    datetime = lubridate::ymd_hms(paste(.data$Date, .data$`Time(EDT)`), tz = timezone))
+    datetime = lubridate::ymd_hms(paste(.data$Date, .data[[!!DSTstring]]), tz = timezone))
   out <- dplyr::filter(
     out,
      .data$datetime >= start & .data$datetime <= end)
