@@ -4,7 +4,7 @@
 \alias{zonar_get_zpass}
 \title{Get zonar zpass tapcard data}
 \usage{
-zonar_get_zpass(start, end, timezone = "America/New_York", convert = NULL)
+zonar_get_zpass(start, end, timezone = "America/New_York", convert = TRUE)
 }
 \arguments{
 \item{start}{Character vector of length one giving the start time in
@@ -17,6 +17,9 @@ yyyy-mm-dd hh:mm:ss format.}
 
 \item{convert}{If \code{TRUE} convert data types, otherwise keep returned values as character}
 }
+\value{
+A \code{data.frame} containing all available tap card data.
+}
 \description{
-Get zonar zpass tapcard data
+Retrieves tap-card data for the specified time period from the Zonar API
 }
